@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-carbonara-black: #111111;
+  --color-carbonara-ivory: #F8F6F2;
+  --color-carbonara-gold: #C9A86A;
+  --color-carbonara-olive: #3E4B36;
+  --color-carbonara-wine: #6E1F28;
+
+  --font-cursive: "Georgia", serif;
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-carbonara-black);
+  color: var(--color-carbonara-ivory);
+  font-family: var(--font-sans);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for gallery */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+}
+
+.menu-card {
+  border-left: 2px solid var(--color-carbonara-gold);
+  background: linear-gradient(90deg, rgba(201, 168, 106, 0.05) 0%, transparent 100%);
+}
+
+.atmospheric-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 70% 30%, var(--color-carbonara-wine) 0%, transparent 40%), radial-gradient(circle at 10% 80%, var(--color-carbonara-olive) 0%, transparent 40%);
+  opacity: 0.3;
+}

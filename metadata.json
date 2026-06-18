@@ -1,0 +1,8 @@
+{
+  "name": "La Carbonara | Ristorante & Bar",
+  "description": "Restaurante italiano premium en Quito. Auténtica cocina italiana artesanal, pizzas, risottos y vinos exclusivos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
