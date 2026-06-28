@@ -1,27 +1,31 @@
 import { motion } from 'motion/react';
-import { ChefHat, Wine, PawPrint, Leaf, GlassWater, Wifi, Sun, UtensilsCrossed } from 'lucide-react';
+import { ChefHat, Leaf, UtensilsCrossed, Wine, GlassWater, Wifi, Sun, PawPrint, Users, HeartHandshake, Heart, ShieldCheck } from 'lucide-react';
 
 export default function Features() {
   const features = [
-    { icon: <ChefHat className="w-8 h-8" />, title: "Cocina Italiana Auténtica" },
-    { icon: <UtensilsCrossed className="w-8 h-8" />, title: "Platos Gourmet Artesanales" },
-    { icon: <Wine className="w-8 h-8" />, title: "Vinos Exclusivos" },
-    { icon: <PawPrint className="w-8 h-8" />, title: "Pet Friendly" },
-    { icon: <Leaf className="w-8 h-8" />, title: "Ingredientes Frescos" },
-    { icon: <GlassWater className="w-8 h-8" />, title: "Eventos y Celebraciones" },
-    { icon: <Wifi className="w-8 h-8" />, title: "Wi-Fi Gratuito" },
-    { icon: <Sun className="w-8 h-8" />, title: "Terraza Exterior" },
+    { icon: <ChefHat className="w-10 h-10" />, title: "Cocina Italiana Artesanal" },
+    { icon: <UtensilsCrossed className="w-10 h-10" />, title: "Platos Exquisitos" },
+    { icon: <Wine className="w-10 h-10" />, title: "Vinos Exclusivos" },
+    { icon: <PawPrint className="w-10 h-10" />, title: "Pet Friendly" },
+    { icon: <Leaf className="w-10 h-10" />, title: "Ingredientes Frescos" },
+    { icon: <GlassWater className="w-10 h-10" />, title: "Eventos y Celebraciones" },
+    { icon: <Wifi className="w-10 h-10" />, title: "Wi-Fi Gratuito" },
+    { icon: <Sun className="w-10 h-10" />, title: "Terraza Exterior" },
+    { icon: <Users className="w-10 h-10" />, title: "Salón Privado" },
+    { icon: <HeartHandshake className="w-10 h-10" />, title: "Atención Personalizada" },
+    { icon: <Heart className="w-10 h-10" />, title: "Citas Románticas" },
+    { icon: <ShieldCheck className="w-10 h-10" />, title: "Espacio Seguro e Inclusivo" },
   ];
 
   return (
-    <section className="py-24 bg-transparent text-carbonara-ivory">
+    <section id="experiencia" className="py-24 bg-transparent text-carbonara-ivory">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-cursive text-4xl md:text-5xl mb-4 text-carbonara-gold">Nuestra Experiencia</h2>
+          <h2 className="font-cursive text-5xl md:text-6xl mb-4 text-carbonara-gold">Nuestra Experiencia</h2>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div 
               key={index}
@@ -29,12 +33,12 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-col items-center text-center group"
+              className="bg-carbonara-wine/60 backdrop-blur-sm border border-carbonara-wine rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-2xl hover:bg-carbonara-wine/80 transition-colors"
             >
-              <div className="w-20 h-20 rounded-full border border-carbonara-gold/30 flex items-center justify-center text-carbonara-gold mb-4 group-hover:bg-carbonara-gold group-hover:text-carbonara-black transition-all duration-500 glass">
+              <div className="text-carbonara-gold mb-4 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <h3 className="font-sans text-[10px] md:text-xs uppercase tracking-widest opacity-60 group-hover:opacity-100 group-hover:text-carbonara-gold transition-colors duration-300">
+              <h3 className="font-sans text-xs md:text-sm uppercase tracking-widest font-semibold">
                 {feature.title}
               </h3>
             </motion.div>

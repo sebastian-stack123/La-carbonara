@@ -1,8 +1,10 @@
 import { motion } from 'motion/react';
+import { IMAGES } from '../config/images';
+import FlagHandshake from './FlagHandshake';
 
 export default function About() {
   return (
-    <section className="py-24 md:py-32 bg-transparent overflow-hidden relative">
+    <section id="historia" className="py-24 md:py-32 bg-transparent overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
         <motion.div 
@@ -12,11 +14,11 @@ export default function About() {
           transition={{ duration: 1 }}
           className="relative"
         >
-          <div className="absolute -inset-4 border border-carbonara-gold/30 translate-x-4 translate-y-4 z-0"></div>
+          <div className="absolute -inset-4 border border-carbonara-wine/50 translate-x-4 translate-y-4 z-0 rounded-xl"></div>
           <img 
-            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=2732&auto=format&fit=crop" 
+            src={IMAGES.aboutChef} 
             alt="Chef preparing pasta" 
-            className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%]"
+            className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%] rounded-xl"
           />
         </motion.div>
 
@@ -30,18 +32,25 @@ export default function About() {
           <h4 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">La Storia</h4>
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light">
             Benvenuti a <br />
-            <span className="text-carbonara-gold italic">&</span> La Carbonara
+            <span className="text-carbonara-wine italic font-bold">&</span> La Carbonara
           </h2>
-          <div className="w-16 h-px bg-carbonara-gold mb-8 mx-auto md:mx-0"></div>
-          <p className="text-lg opacity-60 leading-relaxed italic mb-4">
-            "Somos un restaurante italiano dedicado a ofrecer auténtica cocina italiana artesanal, elaborada con ingredientes seleccionados y recetas tradicionales."
+          <div className="w-16 h-px bg-carbonara-wine mb-8 mx-auto md:mx-0"></div>
+          <p className="text-lg opacity-80 leading-relaxed font-light mb-4">
+            Somos un restaurante italiano dedicado a ofrecer exquisita cocina italiana artesanal, elaborada con ingredientes frescos seleccionados y recetas tradicionales.
           </p>
-          <p className="text-lg opacity-60 leading-relaxed italic">
-            "Nuestra pasión es crear experiencias memorables a través de la gastronomía, los vinos exclusivos y una atención excepcional."
+          <p className="text-lg opacity-80 leading-relaxed font-light mb-8">
+            Creemos experiencias memorables y formidables a través de la gastronomía, vinos exclusivos y una atención excepcional.
           </p>
           
-          <div className="mt-12">
-            <p className="font-cursive text-5xl text-carbonara-ivory/40 mt-4">La Carbonara</p>
+          <div className="mb-10 text-center md:text-left">
+             <p className="text-2xl font-cursive text-carbonara-gold border-b border-carbonara-wine inline-block pb-1">
+               La carbonara, momentos de magia para tu paladar.
+             </p>
+          </div>
+          
+          <div className="mt-12 flex flex-col items-center md:items-start">
+            <FlagHandshake className="mb-4" />
+            <p className="text-sm tracking-widest uppercase opacity-50 mb-2">Operando desde septiembre del 2024.</p>
           </div>
         </motion.div>
         
