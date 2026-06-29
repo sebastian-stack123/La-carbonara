@@ -32,7 +32,7 @@ export default function About() {
           <h4 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">La Storia</h4>
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light">
             Benvenuti a <br />
-            <span className="text-carbonara-wine italic font-bold">&</span> La Carbonara
+            La Carbonara
           </h2>
           <div className="w-16 h-px bg-carbonara-wine mb-8 mx-auto md:mx-0"></div>
           <p className="text-lg opacity-80 leading-relaxed font-light mb-4">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,8 +11,29 @@ import Feedback from './components/Feedback';
 import Info from './components/Info';
 import Footer from './components/Footer';
 import CTA from './components/CTA';
+import Legal from './components/Legal';
 
 export default function App() {
+  const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms' | 'cookies'>('home');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#privacy') setCurrentView('privacy');
+      else if (hash === '#terms') setCurrentView('terms');
+      else if (hash === '#cookies') setCurrentView('cookies');
+      else setCurrentView('home');
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // initial check
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  if (currentView !== 'home') {
+    return <Legal view={currentView} />;
+  }
+
   return (
     <div className="min-h-screen bg-carbonara-black font-sans text-carbonara-ivory selection:bg-carbonara-gold selection:text-black relative">
       <div className="atmospheric-bg fixed top-0 left-0 w-full h-full pointer-events-none"></div>

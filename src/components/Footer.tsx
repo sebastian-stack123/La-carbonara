@@ -54,11 +54,16 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center md:items-start gap-4">
           <p className="text-[10px] opacity-40 uppercase tracking-widest flex flex-col gap-1">
             <span>© 2024 LA CARBONARA. TUTTI I DIRITTI RISERVATI.</span>
             <span>Nos reservamos el derecho de admisión.</span>
           </p>
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 text-[10px] opacity-40 uppercase tracking-widest">
+            <a href="#privacy" className="hover:opacity-100 hover:text-carbonara-gold transition-colors">Política de Privacidad</a>
+            <a href="#terms" className="hover:opacity-100 hover:text-carbonara-gold transition-colors">Términos y Condiciones</a>
+            <a href="#cookies" className="hover:opacity-100 hover:text-carbonara-gold transition-colors">Política de Cookies</a>
+          </div>
         </div>
         <FlagHandshake className="scale-75 md:scale-90" />
         <div className="text-[10px] uppercase tracking-widest text-carbonara-gold">

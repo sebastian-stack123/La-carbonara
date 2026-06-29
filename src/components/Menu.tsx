@@ -10,7 +10,7 @@ export default function Menu() {
       image: IMAGES.menu.linguiniSofiaLauren
     },
     {
-      title: "LA CARBONARA",
+      title: "Linguinne a la carbonara",
       description: "(linguine, tocino, jamón serrano)",
       image: IMAGES.menu.pastaCarbonara
     },

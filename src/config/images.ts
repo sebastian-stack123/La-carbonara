@@ -11,6 +11,7 @@ import pizzaHawaianaImg from './pizzahawaianna.jpg';
 import sofiaLaurenImg from './sofiloren.jpg';
 import fruttiDiMareImg from './fruttidimare.jpg';
 import funghiImg from './funghi.jpg';
+import linguineCarbonaraImg from './Linguinelacarbonara.jpg';
 
 export const IMAGES = {
   // Logo
@@ -25,7 +26,7 @@ export const IMAGES = {
   // Platos del Menú
   menu: {
     linguiniSofiaLauren: sofiaLaurenImg,
-    pastaCarbonara: "https://images.unsplash.com/photo-1612874742237-6526221588e3?q=80&w=2671&auto=format&fit=crop",
+    pastaCarbonara: linguineCarbonaraImg,
     risottoFrankSinatra: "https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=2680&auto=format&fit=crop",
     risottoFunghi: funghiImg,
     risottoFruttiDiMare: fruttiDiMareImg,
