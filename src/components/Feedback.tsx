@@ -5,8 +5,8 @@ export default function Feedback() {
     <section id="sugerencias" className="py-24 bg-transparent relative">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h4 className="text-carbonara-gold font-cursive text-5xl mb-2">Sugerencias</h4>
-          <h2 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Cuéntanos tu experiencia</h2>
+          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">Sugerencias</h2>
+          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Cuéntanos tu experiencia</h3>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50 mb-8"></div>
           <p className="opacity-60 font-light max-w-2xl mx-auto italic">
             Tus comentarios nos ayudan a mejorar y seguir ofreciendo experiencias memorables y formidables.

@@ -14,7 +14,7 @@ export default function OrderOnline() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.h4 
+        <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -22,9 +22,9 @@ export default function OrderOnline() {
           className="font-cursive text-5xl text-carbonara-gold mb-2"
         >
           Delivery
-        </motion.h4>
+        </motion.h2>
         
-        <motion.h2 
+        <motion.h3 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -32,7 +32,7 @@ export default function OrderOnline() {
           className="font-serif text-3xl md:text-5xl text-white mb-6 leading-tight uppercase font-light tracking-widest"
         >
           Disfruta La Carbonara donde quieras
-        </motion.h2>
+        </motion.h3>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

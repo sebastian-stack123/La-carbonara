@@ -18,15 +18,15 @@ export default function Info() {
           <div className="w-12 h-px bg-carbonara-gold mx-auto mb-8 opacity-50"></div>
           
           <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Restaurante</h4>
-          <ul className="space-y-4 opacity-80 font-light text-sm mb-8">
-            <li className="flex justify-between border-b border-white/10 pb-2"><span>Lun - Jueves</span> <span>12:00 - 22:30</span></li>
-            <li className="flex justify-between border-b border-white/10 pb-2"><span>Vie - Sábado</span> <span>12:00 - 23:00</span></li>
+          <ul className="space-y-4 font-light text-sm mb-8">
+            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Lun - Jueves</span> <span>12:00 - 22:30</span></li>
+            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Vie - Sábado</span> <span>12:00 - 23:00</span></li>
             <li className="flex justify-between pb-2 text-carbonara-gold font-medium"><span>Domingo</span> <span>Cerrado</span></li>
           </ul>
 
           <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Almuerzos</h4>
-          <ul className="space-y-3 opacity-80 font-light text-sm mb-6">
-            <li className="flex justify-between pb-2"><span>Todos los días</span> <span>12:00 - 15:30</span></li>
+          <ul className="space-y-3 font-light text-sm mb-6">
+            <li className="flex justify-between pb-2 opacity-90"><span>Todos los días</span> <span>12:00 - 15:30</span></li>
           </ul>
 
           <div className="mt-auto bg-black/20 p-4 rounded-lg">
@@ -101,10 +101,12 @@ export default function Info() {
             href="https://maps.app.goo.gl/u11Ju7Gat2QeAdsS7" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Ver ubicación en Google Maps"
             className="block mb-6 overflow-hidden rounded-lg border border-white/10 hover:border-carbonara-gold/50 transition-colors relative group"
           >
             <div className="absolute inset-0 bg-carbonara-wine/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
             <iframe 
+              title="Mapa de ubicación de La Carbonara"
               src="https://maps.google.com/maps?q=-0.1949162,-78.4776268&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="180" 

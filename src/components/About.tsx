@@ -29,11 +29,11 @@ export default function About() {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-center md:text-left"
         >
-          <h4 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">La Storia</h4>
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light">
+          <h2 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">La Storia</h2>
+          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light">
             Benvenuti a <br />
             La Carbonara
-          </h2>
+          </h3>
           <div className="w-16 h-px bg-carbonara-wine mb-8 mx-auto md:mx-0"></div>
           <p className="text-lg opacity-80 leading-relaxed font-light mb-4">
             Somos un restaurante italiano dedicado a ofrecer exquisita cocina italiana artesanal, elaborada con ingredientes frescos seleccionados y recetas tradicionales.

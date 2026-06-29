@@ -56,8 +56,8 @@ export default function Menu() {
     <section id="menu" className="py-24 bg-transparent relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h4 className="text-carbonara-gold font-cursive text-5xl mb-2">Il nostro</h4>
-          <h2 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Menú Destacado</h2>
+          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">Il nostro</h2>
+          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Menú Destacado</h3>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50"></div>
         </div>
 
