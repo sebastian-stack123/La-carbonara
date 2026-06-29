@@ -21,7 +21,7 @@ export default function Info() {
           <ul className="space-y-4 font-light text-sm mb-8">
             <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Lun - Jueves</span> <span>12:00 - 22:30</span></li>
             <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Vie - Sábado</span> <span>12:00 - 23:00</span></li>
-            <li className="flex justify-between pb-2 text-carbonara-gold font-medium"><span>Domingo</span> <span>Cerrado</span></li>
+            <li className="flex justify-between pb-2 text-carbonara-ivory opacity-90 font-medium"><span>Domingo</span> <span>Cerrado</span></li>
           </ul>
 
           <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Almuerzos</h4>

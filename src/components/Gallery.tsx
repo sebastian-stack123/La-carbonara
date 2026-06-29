@@ -19,6 +19,7 @@ export default function Gallery() {
             <img 
               src={src} 
               alt={`Gallery image ${index + 1}`} 
+              loading="lazy"
               className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
             />
             {/* Subtle overlay */}

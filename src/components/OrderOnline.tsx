@@ -8,6 +8,7 @@ export default function OrderOnline() {
         <img 
           src={IMAGES.deliveryBackground} 
           alt="Pizza background" 
+          loading="lazy"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
         <div className="absolute inset-0 bg-carbonara-black/80"></div>

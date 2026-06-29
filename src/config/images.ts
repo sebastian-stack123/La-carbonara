@@ -21,17 +21,17 @@ export const IMAGES = {
   heroBackground: heroBg,
   
   // Sección Historia (About)
-  aboutChef: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=2732&auto=format&fit=crop",
+  aboutChef: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop",
 
   // Platos del Menú
   menu: {
     linguiniSofiaLauren: sofiaLaurenImg,
     pastaCarbonara: linguineCarbonaraImg,
-    risottoFrankSinatra: "https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=2680&auto=format&fit=crop",
+    risottoFrankSinatra: "https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=800&auto=format&fit=crop",
     risottoFunghi: funghiImg,
     risottoFruttiDiMare: fruttiDiMareImg,
-    pizza4Formaggi: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2670&auto=format&fit=crop",
-    pizzaSalmon: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=80&w=2574&auto=format&fit=crop",
+    pizza4Formaggi: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
+    pizzaSalmon: "https://images.unsplash.com/photo-1555072956-7758afb20e8f?q=80&w=800&auto=format&fit=crop",
     pizzaProsciutto: pizzaProsciuttoImg,
     pizzaHawaiana: pizzaHawaianaImg
   },

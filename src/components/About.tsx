@@ -18,6 +18,7 @@ export default function About() {
           <img 
             src={IMAGES.aboutChef} 
             alt="Chef preparing pasta" 
+            loading="lazy"
             className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%] rounded-xl"
           />
         </motion.div>

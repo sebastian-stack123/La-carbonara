@@ -8,6 +8,7 @@ export default function CTA() {
         <img 
           src={IMAGES.ctaBackground} 
           alt="Restaurant table setup" 
+          loading="lazy"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
         <div className="absolute inset-0 bg-carbonara-black/80"></div>
