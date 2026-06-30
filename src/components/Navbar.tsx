@@ -30,7 +30,8 @@ export default function Navbar() {
         <a href="#inicio" className="flex-shrink-0 transition-opacity hover:opacity-80 flex items-center relative h-12 md:h-16 w-40 md:w-48">
           <img 
             src={IMAGES.logo} 
-            alt="La Carbonara Logo" 
+            alt="La Carbonara Logo"
+            fetchPriority="high"
             className="absolute top-1/2 left-0 -translate-y-1/2 h-24 md:h-32 w-auto object-contain max-w-none"
           />
         </a>

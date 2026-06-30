@@ -24,7 +24,7 @@ export const IMAGES = {
   heroBackground: heroBg,
   
   // Sección Historia (About)
-  aboutChef: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop",
+  aboutChef: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=70&w=600&fm=webp&auto=format&fit=crop",
 
   // Platos del Menú
   menu: {
@@ -33,7 +33,7 @@ export const IMAGES = {
     risottoFrankSinatra: frankSinatraImg,
     risottoFunghi: funghiImg,
     risottoFruttiDiMare: fruttiDiMareImg,
-    pizza4Formaggi: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
+    pizza4Formaggi: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=70&w=600&fm=webp&auto=format&fit=crop",
     pizzaSalmon: pizzaSalmonImg,
     pizzaProsciutto: pizzaProsciuttoImg,
     pizzaHawaiana: pizzaHawaianaImg

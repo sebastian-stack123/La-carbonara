@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Features from './components/Features';
-import Menu from './components/Menu';
-import Gallery from './components/Gallery';
-import OrderOnline from './components/OrderOnline';
-import Feedback from './components/Feedback';
-import Info from './components/Info';
-import Footer from './components/Footer';
-import CTA from './components/CTA';
-import Legal from './components/Legal';
+
+const About = lazy(() => import('./components/About'));
+const Features = lazy(() => import('./components/Features'));
+const Menu = lazy(() => import('./components/Menu'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const OrderOnline = lazy(() => import('./components/OrderOnline'));
+const Feedback = lazy(() => import('./components/Feedback'));
+const Info = lazy(() => import('./components/Info'));
+const Footer = lazy(() => import('./components/Footer'));
+const CTA = lazy(() => import('./components/CTA'));
+const Legal = lazy(() => import('./components/Legal'));
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms' | 'cookies'>('home');
@@ -31,7 +32,11 @@ export default function App() {
   }, []);
 
   if (currentView !== 'home') {
-    return <Legal view={currentView} />;
+    return (
+      <Suspense fallback={<div className="h-screen flex items-center justify-center text-carbonara-gold opacity-50 bg-carbonara-black">Cargando...</div>}>
+        <Legal view={currentView} />
+      </Suspense>
+    );
   }
 
   return (
@@ -39,15 +44,17 @@ export default function App() {
       <div className="atmospheric-bg fixed top-0 left-0 w-full h-full pointer-events-none"></div>
       <Navbar />
       <Hero />
-      <About />
-      <Features />
-      <Menu />
-      <Gallery />
-      <OrderOnline />
-      <Feedback />
-      <Info />
-      <CTA />
-      <Footer />
+      <Suspense fallback={<div className="h-24 flex items-center justify-center text-carbonara-gold opacity-50">Cargando...</div>}>
+        <About />
+        <Features />
+        <Menu />
+        <Gallery />
+        <OrderOnline />
+        <Feedback />
+        <Info />
+        <CTA />
+        <Footer />
+      </Suspense>
       
       {/* WhatsApp Floating Button */}
       <a 
