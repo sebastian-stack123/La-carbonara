@@ -14,7 +14,7 @@ import fruttiDiMareImg from './fruttidimare.jpg';
 import funghiImg from './rissotofungui.jpg';
 import linguineCarbonaraImg from './Linguinelacarbonara.jpg';
 import frankSinatraImg from './franksinatra.jpg';
-import pizzaSalmonImg from './pizzasalmon.jpg';
+import pizzaSalmonImg from './piztsadesalmonahumado.jpg';
 
 export const IMAGES = {
   // Logo

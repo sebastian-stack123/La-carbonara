@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ChefHat, Leaf, UtensilsCrossed, Wine, GlassWater, Wifi, Sun, PawPrint, Users, HeartHandshake, Heart, ShieldCheck } from 'lucide-react';
+import { ChefHat, Leaf, UtensilsCrossed, Wine, GlassWater, Wifi, Sun, PawPrint, Users, HeartHandshake, Heart, ShieldCheck, Martini } from 'lucide-react';
 
 export default function Features() {
   const features = [
@@ -7,7 +7,7 @@ export default function Features() {
     { icon: <UtensilsCrossed className="w-10 h-10" />, title: "Platos Exquisitos" },
     { icon: <Wine className="w-10 h-10" />, title: "Vinos Exclusivos" },
     { icon: <PawPrint className="w-10 h-10" />, title: "Pet Friendly" },
-    { icon: <Leaf className="w-10 h-10" />, title: "Ingredientes Frescos" },
+    { icon: <Martini className="w-10 h-10" />, title: "Coctelería de Autor" },
     { icon: <GlassWater className="w-10 h-10" />, title: "Eventos y Celebraciones" },
     { icon: <Wifi className="w-10 h-10" />, title: "Wi-Fi Gratuito" },
     { icon: <Sun className="w-10 h-10" />, title: "Terraza Exterior" },
