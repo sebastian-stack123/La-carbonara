@@ -40,7 +40,7 @@ export default function About() {
             Somos un restaurante italiano dedicado a ofrecer exquisita cocina italiana artesanal, elaborada con ingredientes frescos seleccionados y recetas tradicionales.
           </p>
           <p className="text-lg opacity-80 leading-relaxed font-light mb-8">
-            Creemos experiencias memorables y formidables a través de la gastronomía, vinos exclusivos y una atención excepcional.
+            Creamos experiencias memorables y formidables a través de la gastronomía, vinos exclusivos y una atención excepcional.
           </p>
           
           <div className="mb-10 text-center md:text-left">

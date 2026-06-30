@@ -23,7 +23,7 @@ export default function Footer() {
         <div>
           <h3 className="font-sans text-[10px] uppercase tracking-widest text-carbonara-gold mb-6 font-bold">Contacto</h3>
           <ul className="space-y-4 opacity-80 font-light text-xs">
-            <li>N34-90 Edificio Patiño,<br/>Quito, Ecuador</li>
+            <li>N32-90 Edificio Patiño,<br/>Quito, Ecuador</li>
             <li><a href="tel:+593998594056" className="hover:text-carbonara-gold transition-colors">099 859 4056</a></li>
             <li><a href="mailto:Lacarbonaraecuador@gmail.com" className="hover:text-carbonara-gold transition-colors">Lacarbonaraecuador@gmail.com</a></li>
           </ul>
@@ -37,6 +37,7 @@ export default function Footer() {
             <li className="flex justify-between opacity-80"><span>Vie - Sábado:</span> <span>12:00 - 23:00</span></li>
             <li className="flex justify-between text-carbonara-ivory opacity-90 font-medium"><span>Domingo:</span> <span>Cerrado</span></li>
             <li className="pt-2 border-t border-white/10 mt-2 opacity-80">De Lunes a Viernes menú ejecutivo</li>
+            <li className="pt-2 border-t border-white/10 opacity-80 text-carbonara-gold">Domingos bajo reserva únicamente</li>
           </ul>
         </div>
 
