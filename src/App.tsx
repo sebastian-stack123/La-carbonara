@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -66,6 +67,7 @@ export default function App() {
       >
         <MessageCircle className="w-8 h-8 md:w-10 md:h-10" />
       </a>
+      <Analytics />
     </div>
   );
 }
