@@ -35,9 +35,8 @@ export default function Footer() {
           <ul className="space-y-3 font-light text-xs">
             <li className="flex justify-between opacity-80"><span>Lun - Jueves:</span> <span>12:00 - 22:30</span></li>
             <li className="flex justify-between opacity-80"><span>Vie - Sábado:</span> <span>12:00 - 23:00</span></li>
-            <li className="flex justify-between text-carbonara-ivory opacity-90 font-medium"><span>Domingo:</span> <span>Cerrado</span></li>
+            <li className="flex justify-between text-carbonara-ivory opacity-90 font-medium items-center"><span>Domingo:</span> <span className="text-right text-carbonara-gold text-[10px] leading-tight">Bajo reserva<br/>únicamente</span></li>
             <li className="pt-2 border-t border-white/10 mt-2 opacity-80">De Lunes a Viernes menú ejecutivo</li>
-            <li className="pt-2 border-t border-white/10 opacity-80 text-carbonara-gold">Domingos bajo reserva únicamente</li>
           </ul>
         </div>
 

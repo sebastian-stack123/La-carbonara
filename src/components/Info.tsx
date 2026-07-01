@@ -21,7 +21,7 @@ export default function Info() {
           <ul className="space-y-4 font-light text-sm mb-8">
             <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Lun - Jueves</span> <span>12:00 - 22:30</span></li>
             <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Vie - Sábado</span> <span>12:00 - 23:00</span></li>
-            <li className="flex justify-between pb-2 text-carbonara-ivory opacity-90 font-medium"><span>Domingo</span> <span>Cerrado</span></li>
+            <li className="flex justify-between pb-2 text-carbonara-ivory opacity-90 font-medium items-center"><span>Domingo</span> <span className="text-right text-carbonara-gold text-[10px] leading-tight">Bajo reserva<br/>únicamente</span></li>
           </ul>
 
           <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Almuerzos</h4>
@@ -29,7 +29,7 @@ export default function Info() {
             <li className="flex justify-between pb-2 opacity-90"><span>Todos los días</span> <span>12:00 - 15:30</span></li>
           </ul>
 
-          <div className="mt-auto bg-black/20 p-4 rounded-lg">
+          <div className="mt-auto bg-black/20 p-4 rounded-lg hidden">
             <p className="text-xs uppercase tracking-widest font-medium text-carbonara-gold">Domingos bajo reserva únicamente</p>
           </div>
         </motion.div>
