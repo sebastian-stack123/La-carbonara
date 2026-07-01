@@ -15,6 +15,9 @@ import funghiImg from './rissotofungui.jpg';
 import linguineCarbonaraImg from './Linguinelacarbonara.jpg';
 import frankSinatraImg from './franksinatra.jpg';
 import pizzaSalmonImg from './piztsadesalmonahumado.jpg';
+import pizza4FormaggiImg from './pizza4formeaggui.jpg';
+import aboutHistoriaImg from './fotolastoria.jpg';
+import mapLocationImg from './mapadeubicacion.jpg';
 
 export const IMAGES = {
   // Logo
@@ -23,8 +26,11 @@ export const IMAGES = {
   // Sección Inicio (Hero)
   heroBackground: heroBg,
   
+  // Mapa
+  mapLocation: mapLocationImg,
+  
   // Sección Historia (About)
-  aboutChef: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=70&w=600&fm=webp&auto=format&fit=crop",
+  aboutChef: aboutHistoriaImg,
 
   // Platos del Menú
   menu: {
@@ -33,7 +39,7 @@ export const IMAGES = {
     risottoFrankSinatra: frankSinatraImg,
     risottoFunghi: funghiImg,
     risottoFruttiDiMare: fruttiDiMareImg,
-    pizza4Formaggi: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=70&w=600&fm=webp&auto=format&fit=crop",
+    pizza4Formaggi: pizza4FormaggiImg,
     pizzaSalmon: pizzaSalmonImg,
     pizzaProsciutto: pizzaProsciuttoImg,
     pizzaHawaiana: pizzaHawaianaImg

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { IMAGES } from '../config/images';
 
 export default function Info() {
   return (
@@ -96,26 +97,20 @@ export default function Info() {
         >
           <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">Visítanos</h3>
           <div className="w-12 h-px bg-carbonara-gold mx-auto mb-8 opacity-50"></div>
-          
+
           <a 
             href="https://maps.app.goo.gl/u11Ju7Gat2QeAdsS7" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="Ver ubicación en Google Maps"
-            className="block mb-6 overflow-hidden rounded-lg border border-white/10 hover:border-carbonara-gold/50 transition-colors relative group"
+            className="block mb-6 overflow-hidden rounded-lg border border-white/10 hover:border-carbonara-gold/50 transition-colors relative group h-[200px]"
           >
             <div className="absolute inset-0 bg-carbonara-wine/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-            <iframe 
-              title="Mapa de ubicación de La Carbonara"
-              src="https://maps.google.com/maps?q=-0.1949162,-78.4776268&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="180" 
-              style={{ border: 0 }} 
-              allowFullScreen={false} 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none"
-            ></iframe>
+            <img 
+              src={IMAGES.mapLocation} 
+              alt="Mapa de ubicación de La Carbonara" 
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+            />
           </a>
 
           <ul className="space-y-6">
