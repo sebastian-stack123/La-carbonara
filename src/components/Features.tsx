@@ -1,27 +1,30 @@
 import { motion } from 'motion/react';
 import { ChefHat, Leaf, UtensilsCrossed, Wine, GlassWater, Wifi, Sun, PawPrint, Users, HeartHandshake, Heart, ShieldCheck, Martini } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Features() {
+  const { t } = useTranslation();
+
   const features = [
-    { icon: <ChefHat className="w-10 h-10" />, title: "Cocina Italiana Artesanal" },
-    { icon: <UtensilsCrossed className="w-10 h-10" />, title: "Platos Exquisitos" },
-    { icon: <Wine className="w-10 h-10" />, title: "Vinos Exclusivos" },
-    { icon: <PawPrint className="w-10 h-10" />, title: "Pet Friendly" },
-    { icon: <Martini className="w-10 h-10" />, title: "Coctelería de Autor" },
-    { icon: <GlassWater className="w-10 h-10" />, title: "Eventos y Celebraciones" },
-    { icon: <Wifi className="w-10 h-10" />, title: "Wi-Fi Gratuito" },
-    { icon: <Sun className="w-10 h-10" />, title: "Terraza Exterior" },
-    { icon: <Users className="w-10 h-10" />, title: "Salón Privado" },
-    { icon: <HeartHandshake className="w-10 h-10" />, title: "Atención Personalizada" },
-    { icon: <Heart className="w-10 h-10" />, title: "Citas Románticas" },
-    { icon: <ShieldCheck className="w-10 h-10" />, title: "Espacio Seguro e Inclusivo" },
+    { icon: <ChefHat className="w-10 h-10" />, title: t('features.f1') },
+    { icon: <UtensilsCrossed className="w-10 h-10" />, title: t('features.f2') },
+    { icon: <Wine className="w-10 h-10" />, title: t('features.f3') },
+    { icon: <PawPrint className="w-10 h-10" />, title: t('features.f4') },
+    { icon: <Martini className="w-10 h-10" />, title: t('features.f5') },
+    { icon: <GlassWater className="w-10 h-10" />, title: t('features.f6') },
+    { icon: <Wifi className="w-10 h-10" />, title: t('features.f7') },
+    { icon: <Sun className="w-10 h-10" />, title: t('features.f8') },
+    { icon: <Users className="w-10 h-10" />, title: t('features.f9') },
+    { icon: <HeartHandshake className="w-10 h-10" />, title: t('features.f10') },
+    { icon: <Heart className="w-10 h-10" />, title: t('features.f11') },
+    { icon: <ShieldCheck className="w-10 h-10" />, title: t('features.f12') },
   ];
 
   return (
     <section id="experiencia" className="py-24 bg-transparent text-carbonara-ivory">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-cursive text-5xl md:text-6xl mb-4 text-carbonara-gold">Nuestra Experiencia</h2>
+          <h2 className="font-cursive text-5xl md:text-6xl mb-4 text-carbonara-gold">{t('features.title')}</h2>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50"></div>
         </div>
 

@@ -1,53 +1,56 @@
 import { motion } from 'motion/react';
 import { Leaf } from 'lucide-react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
 
 export default function Menu() {
+  const { t } = useTranslation();
+
   const menuItems = [
     {
-      title: "Fettuccine Sofia Lauren",
-      description: "(camarón, pollo, napoli y mamamia)",
+      title: t('menu.items.sofia.title'),
+      description: t('menu.items.sofia.desc'),
       image: IMAGES.menu.linguiniSofiaLauren
     },
     {
-      title: "Linguinne a la carbonara",
-      description: "(linguine, tocino, jamón serrano)",
+      title: t('menu.items.carbonara.title'),
+      description: t('menu.items.carbonara.desc'),
       image: IMAGES.menu.pastaCarbonara
     },
     {
-      title: "Risotto Frank Sinatra",
-      description: "(lomo fino, camarón, napoli y mamamia)",
+      title: t('menu.items.sinatra.title'),
+      description: t('menu.items.sinatra.desc'),
       image: IMAGES.menu.risottoFrankSinatra
     },
     {
-      title: "Risotto Funghi",
-      description: "(setas, portobellos, champiñon, hongos shiitake)",
+      title: t('menu.items.funghi.title'),
+      description: t('menu.items.funghi.desc'),
       image: IMAGES.menu.risottoFunghi
     },
     {
-      title: "Fruto di Mare",
-      description: "(Calamar, camarón, mejillón, pulpo)",
+      title: t('menu.items.mare.title'),
+      description: t('menu.items.mare.desc'),
       image: IMAGES.menu.risottoFruttiDiMare
     },
     {
-      title: "Pizza 4 Formaggui",
-      description: "(salsa blanca)",
+      title: t('menu.items.formaggi.title'),
+      description: t('menu.items.formaggi.desc'),
       isVegetarian: true,
       image: IMAGES.menu.pizza4Formaggi
     },
     {
-      title: "Pizza de Salmón Ahumado",
-      description: "Finas láminas de salmón ahumado, alcaparras y queso crema.",
+      title: t('menu.items.salmon.title'),
+      description: t('menu.items.salmon.desc'),
       image: IMAGES.menu.pizzaSalmon
     },
     {
-      title: "Pizza Prosciutto Crudo",
-      description: "Mozzarella y auténtico prosciutto crudo importado.",
+      title: t('menu.items.prosciutto.title'),
+      description: t('menu.items.prosciutto.desc'),
       image: IMAGES.menu.pizzaProsciutto
     },
     {
-      title: "Pizza Hawaiana",
-      description: "Salsa roja, mozzarella, jamón, tocino y piña.",
+      title: t('menu.items.hawaiana.title'),
+      description: t('menu.items.hawaiana.desc'),
       image: IMAGES.menu.pizzaHawaiana
     }
   ];
@@ -56,8 +59,8 @@ export default function Menu() {
     <section id="menu" className="py-24 bg-transparent relative">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">Il nostro</h2>
-          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Menú Destacado</h3>
+          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">{t('menu.ilNostro')}</h2>
+          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">{t('menu.featured')}</h3>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50"></div>
         </div>
 
@@ -99,7 +102,7 @@ export default function Menu() {
           className="text-center mt-16"
         >
           <a href="/La_Carbonara_menu.pdf" target="_blank" rel="noopener noreferrer" className="bg-carbonara-wine text-white px-12 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 inline-block">
-            Ver Menú Completo
+            {t('menu.viewFull')}
           </a>
         </motion.div>
       </div>

@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
 
 export default function OrderOnline() {
+  const { t } = useTranslation();
+
   return (
     <section id="delivery" className="relative py-32 overflow-hidden flex items-center justify-center border-t border-white/5">
       <div className="absolute inset-0 z-0">
@@ -22,7 +25,7 @@ export default function OrderOnline() {
           transition={{ duration: 0.8 }}
           className="font-cursive text-5xl text-carbonara-gold mb-2"
         >
-          Delivery
+          {t('order.title')}
         </motion.h2>
         
         <motion.h3 
@@ -32,7 +35,7 @@ export default function OrderOnline() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-3xl md:text-5xl text-white mb-6 leading-tight uppercase font-light tracking-widest"
         >
-          Disfruta La Carbonara donde quieras
+          {t('order.subtitle')}
         </motion.h3>
 
         <motion.p
@@ -42,7 +45,7 @@ export default function OrderOnline() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="font-cursive text-2xl md:text-3xl text-carbonara-gold/90 mb-12 max-w-2xl mx-auto"
         >
-          Contamos con delivery gratuito a toda la González Suárez.
+          {t('order.desc')}
         </motion.p>
         
         <motion.div
@@ -58,7 +61,7 @@ export default function OrderOnline() {
             rel="noopener noreferrer"
             className="bg-carbonara-wine text-white px-10 py-4 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 w-full sm:w-auto text-center"
           >
-            Uber Eats
+            {t('order.uber')}
           </a>
           <a 
             href="https://www.rappi.com.ec/restaurantes/35749-la-carbonara" 
@@ -66,13 +69,13 @@ export default function OrderOnline() {
             rel="noopener noreferrer"
             className="bg-carbonara-wine text-white px-10 py-4 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 w-full sm:w-auto text-center"
           >
-            Rappi
+            {t('order.rappi')}
           </a>
           <a 
             href="tel:+593998594056" 
             className="bg-carbonara-wine text-white px-10 py-4 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 w-full sm:w-auto text-center"
           >
-            Llamar Ahora
+            {t('order.call')}
           </a>
         </motion.div>
       </div>

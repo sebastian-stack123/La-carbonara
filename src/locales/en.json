@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "experience": "Experience",
+    "menu": "Menu",
+    "delivery": "Delivery",
+    "reservations": "Reservations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "La Carbonara",
+    "subtitle": "Ristorante & Bar",
+    "description": "\"A gastronomic experience inspired by Italian tradition, selected ingredients, exclusive wines, and handcrafted dishes.\"",
+    "bookNow": "Book Now",
+    "feedback": "Tell us about your experience"
+  },
+  "about": {
+    "title": "La Storia",
+    "welcome": "Benvenuti a <br />La Carbonara",
+    "p1": "We are an Italian restaurant dedicated to offering exquisite handcrafted Italian cuisine, prepared with fresh selected ingredients and traditional recipes.",
+    "p2": "We create memorable and formidable experiences through gastronomy, exclusive wines, and exceptional service.",
+    "quote": "La carbonara, moments of magic for your palate.",
+    "operatingSince": "Operating since September 2024."
+  },
+  "features": {
+    "title": "Our Experience",
+    "f1": "Artisanal Italian Cuisine",
+    "f2": "Exquisite Dishes",
+    "f3": "Exclusive Wines",
+    "f4": "Pet Friendly",
+    "f5": "Signature Cocktails",
+    "f6": "Events and Celebrations",
+    "f7": "Free Wi-Fi",
+    "f8": "Outdoor Terrace",
+    "f9": "Private Room",
+    "f10": "Personalized Service",
+    "f11": "Romantic Dates",
+    "f12": "Safe and Inclusive Space"
+  },
+  "menu": {
+    "ilNostro": "Il nostro",
+    "featured": "Featured Menu",
+    "viewFull": "View Full Menu",
+    "items": {
+      "sofia": {
+        "title": "Fettuccine Sofia Lauren",
+        "desc": "(shrimp, chicken, napoli and mamamia)"
+      },
+      "carbonara": {
+        "title": "Linguinne a la carbonara",
+        "desc": "(linguine, bacon, serrano ham)"
+      },
+      "sinatra": {
+        "title": "Risotto Frank Sinatra",
+        "desc": "(tenderloin, shrimp, napoli and mamamia)"
+      },
+      "funghi": {
+        "title": "Risotto Funghi",
+        "desc": "(mushrooms, portobellos, button mushrooms, shiitake mushrooms)"
+      },
+      "mare": {
+        "title": "Fruto di Mare",
+        "desc": "(Squid, shrimp, mussel, octopus)"
+      },
+      "formaggi": {
+        "title": "Pizza 4 Formaggui",
+        "desc": "(white sauce)"
+      },
+      "salmon": {
+        "title": "Smoked Salmon Pizza",
+        "desc": "Thin slices of smoked salmon, capers, and cream cheese."
+      },
+      "prosciutto": {
+        "title": "Prosciutto Crudo Pizza",
+        "desc": "Mozzarella and authentic imported prosciutto crudo."
+      },
+      "hawaiana": {
+        "title": "Hawaiian Pizza",
+        "desc": "Red sauce, mozzarella, ham, bacon, and pineapple."
+      }
+    }
+  },
+  "order": {
+    "title": "Delivery",
+    "subtitle": "Enjoy La Carbonara wherever you want",
+    "desc": "We offer free delivery to all of González Suárez.",
+    "uber": "Uber Eats",
+    "rappi": "Rappi",
+    "call": "Call Now"
+  },
+  "feedback": {
+    "title": "Suggestions",
+    "subtitle": "Tell us about your experience",
+    "desc": "Your comments help us improve and continue offering memorable and formidable experiences.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message / Suggestion",
+    "submit": "Submit Suggestion"
+  },
+  "cta": {
+    "title": "Ci vediamo presto",
+    "subtitle": "Live a true Italian experience",
+    "desc": "Reserve your table and discover the authentic flavors of Italy.",
+    "book": "Book Table",
+    "call": "Call Now"
+  },
+  "contact": {
+    "hoursTitle": "Hours",
+    "restaurant": "Restaurant",
+    "days1": "Mon - Thu",
+    "hours1": "12:00 PM - 10:30 PM",
+    "days2": "Fri - Sat",
+    "hours2": "12:00 PM - 11:00 PM",
+    "days3": "Sunday",
+    "hours3": "By reservation<br/>only",
+    "lunch": "Lunches",
+    "lunchDays": "Every day",
+    "lunchHours": "12:00 PM - 3:30 PM",
+    "sundayOnly": "Sundays by reservation only",
+    "followUs": "Follow Us",
+    "quote": "\"A new concept in Italian cuisine. We believe that good food brings people together.\"",
+    "visitUs": "Visit Us"
+  },
+  "footer": {
+    "quote": "La carbonara, moments of magic for your palate.",
+    "desc": "Authentic artisanal Italian cuisine. Fresh ingredients, exclusive wines, and exceptional service in Quito.",
+    "contact": "Contact",
+    "hours": "Hours",
+    "days1": "Mon - Thu:",
+    "days2": "Fri - Sat:",
+    "days3": "Sunday:",
+    "execMenu": "Executive menu from Monday to Friday",
+    "links": "Links",
+    "rights": "© 2024 LA CARBONARA. ALL RIGHTS RESERVED.",
+    "admission": "We reserve the right of admission.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "cookies": "Cookie Policy",
+    "created": "CREATED BY"
+  },
+  "loading": "Loading..."
+}

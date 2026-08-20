@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,24 +18,24 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Historia', href: '#historia' },
-    { name: 'Experiencia', href: '#experiencia' },
-    { name: 'Menú', href: '#menu' },
-    { name: 'Delivery', href: '#delivery' },
-    { name: 'Reservas', href: '#reservas' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: t('nav.home'), href: '#inicio' },
+    { name: t('nav.history'), href: '#historia' },
+    { name: t('nav.experience'), href: '#experiencia' },
+    { name: t('nav.menu'), href: '#menu' },
+    { name: t('nav.delivery'), href: '#delivery' },
+    { name: t('nav.reservations'), href: '#reservas' },
+    { name: t('nav.contact'), href: '#contacto' },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-carbonara-black/95 backdrop-blur-md py-4 border-b border-white/10 shadow-xl' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#inicio" className="flex-shrink-0 transition-opacity hover:opacity-80 flex items-center relative h-12 md:h-16 w-40 md:w-48">
+        <a href="#inicio" className="flex-shrink-0 transition-opacity hover:opacity-80 flex items-center relative h-12 md:h-16 w-32 md:w-48">
           <img 
             src={IMAGES.logo} 
             alt="La Carbonara Logo"
             fetchPriority="high"
-            className="absolute top-1/2 left-0 -translate-y-1/2 h-24 md:h-32 w-auto object-contain max-w-none"
+            className="absolute top-1/2 left-0 -translate-y-1/2 h-20 md:h-32 w-auto object-contain max-w-none"
           />
         </a>
         
@@ -42,15 +45,19 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <LanguageSwitcher />
         </div>
 
-        <button 
-          className="lg:hidden text-carbonara-gold"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+          <LanguageSwitcher />
+          <button 
+            className="text-carbonara-gold"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -66,6 +73,7 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <LanguageSwitcher />
         </div>
       )}
     </nav>

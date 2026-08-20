@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import { useTranslation } from 'react-i18next';
 
 const About = lazy(() => import('./components/About'));
 const Features = lazy(() => import('./components/Features'));
@@ -17,6 +18,7 @@ const CTA = lazy(() => import('./components/CTA'));
 const Legal = lazy(() => import('./components/Legal'));
 
 export default function App() {
+  const { t } = useTranslation();
   const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms' | 'cookies'>('home');
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function App() {
 
   if (currentView !== 'home') {
     return (
-      <Suspense fallback={<div className="h-screen flex items-center justify-center text-carbonara-gold opacity-50 bg-carbonara-black">Cargando...</div>}>
+      <Suspense fallback={<div className="h-screen flex items-center justify-center text-carbonara-gold opacity-50 bg-carbonara-black">{t('loading')}</div>}>
         <Legal view={currentView} />
       </Suspense>
     );
@@ -46,7 +48,7 @@ export default function App() {
       <div className="atmospheric-bg fixed top-0 left-0 w-full h-full pointer-events-none"></div>
       <Navbar />
       <Hero />
-      <Suspense fallback={<div className="h-24 flex items-center justify-center text-carbonara-gold opacity-50">Cargando...</div>}>
+      <Suspense fallback={<div className="h-24 flex items-center justify-center text-carbonara-gold opacity-50">{t('loading')}</div>}>
         <About />
         <Features />
         <Menu />

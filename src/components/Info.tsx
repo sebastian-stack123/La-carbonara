@@ -1,13 +1,16 @@
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
 
 export default function Info() {
+  const { t } = useTranslation();
+
   return (
     <section id="contacto" className="py-24 bg-transparent text-carbonara-ivory">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
         
-        {/* Horarios */}
+        {/* {t('contact.hoursTitle')} */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,23 +18,23 @@ export default function Info() {
           transition={{ duration: 0.8 }}
           className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-10 text-center shadow-xl flex flex-col justify-center"
         >
-          <h3 className="font-cursive text-5xl text-carbonara-gold mb-4">Horarios</h3>
+          <h3 className="font-cursive text-5xl text-carbonara-gold mb-4">{t('contact.hoursTitle')}</h3>
           <div className="w-12 h-px bg-carbonara-gold mx-auto mb-8 opacity-50"></div>
           
-          <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Restaurante</h4>
+          <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">{t('contact.restaurant')}</h4>
           <ul className="space-y-4 font-light text-sm mb-8">
-            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Lun - Jueves</span> <span>12:00 - 22:30</span></li>
-            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>Vie - Sábado</span> <span>12:00 - 23:00</span></li>
-            <li className="flex justify-between pb-2 text-carbonara-ivory opacity-90 font-medium items-center"><span>Domingo</span> <span className="text-right text-carbonara-gold text-[10px] leading-tight">Bajo reserva<br/>únicamente</span></li>
+            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>{t('contact.days1')}</span> <span>{t('contact.hours1')}</span></li>
+            <li className="flex justify-between border-b border-white/10 pb-2 opacity-90"><span>{t('contact.days2')}</span> <span>{t('contact.hours2')}</span></li>
+            <li className="flex justify-between pb-2 text-carbonara-ivory opacity-90 font-medium items-center"><span>{t('contact.days3')}</span> <span className="text-right text-carbonara-gold text-[10px] leading-tight" dangerouslySetInnerHTML={{ __html: t('contact.hours3') }}></span></li>
           </ul>
 
-          <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">Almuerzos</h4>
+          <h4 className="font-sans font-semibold text-xs uppercase tracking-widest text-carbonara-gold mb-4">{t('contact.lunch')}</h4>
           <ul className="space-y-3 font-light text-sm mb-6">
-            <li className="flex justify-between pb-2 opacity-90"><span>Todos los días</span> <span>12:00 - 15:30</span></li>
+            <li className="flex justify-between pb-2 opacity-90"><span>{t('contact.lunchDays')}</span> <span>{t('contact.lunchHours')}</span></li>
           </ul>
 
           <div className="mt-auto bg-black/20 p-4 rounded-lg hidden">
-            <p className="text-xs uppercase tracking-widest font-medium text-carbonara-gold">Domingos bajo reserva únicamente</p>
+            <p className="text-xs uppercase tracking-widest font-medium text-carbonara-gold">{t('contact.days3')}s bajo reserva únicamente</p>
           </div>
         </motion.div>
 
@@ -44,11 +47,11 @@ export default function Info() {
           className="flex flex-col justify-between gap-8"
         >
           <div className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-8 shadow-xl flex-grow">
-            <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">Síguenos</h3>
+            <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">{t('contact.followUs')}</h3>
             <div className="w-12 h-px bg-carbonara-gold mx-auto mb-6 opacity-50"></div>
             
             <p className="text-xs opacity-80 text-center mb-8 font-light italic">
-              "Un nuevo concepto en cocina Italiana. Creemos en que la buena comida une a las personas."
+              {t('contact.quote')}
             </p>
 
             <div className="flex flex-col gap-4">
@@ -95,7 +98,7 @@ export default function Info() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-8 shadow-xl flex flex-col justify-center"
         >
-          <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">Visítanos</h3>
+          <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">{t('contact.visitUs')}</h3>
           <div className="w-12 h-px bg-carbonara-gold mx-auto mb-8 opacity-50"></div>
 
           <a 

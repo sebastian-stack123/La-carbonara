@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
 
 export default function CTA() {
+  const { t } = useTranslation();
+
   return (
     <section id="reservas" className="relative py-32 overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 z-0">
@@ -22,7 +25,7 @@ export default function CTA() {
           transition={{ duration: 0.8 }}
           className="font-cursive text-6xl text-carbonara-gold mb-6"
         >
-          Ci vediamo presto
+          {t('cta.title')}
         </motion.h2>
         
         <motion.h3 
@@ -32,7 +35,7 @@ export default function CTA() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-sans font-light tracking-widest uppercase text-3xl md:text-5xl text-white mb-6 leading-tight pb-2"
         >
-          Vive una verdadera experiencia italiana
+          {t('cta.subtitle')}
         </motion.h3>
         
         <motion.p 
@@ -42,7 +45,7 @@ export default function CTA() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-gray-300 text-lg font-light mb-12 italic"
         >
-          Reserva tu mesa y descubre los sabores auténticos de Italia.
+          {t('cta.desc')}
         </motion.p>
         
         <motion.div
@@ -58,13 +61,13 @@ export default function CTA() {
             rel="noopener noreferrer"
             className="bg-carbonara-wine text-white px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 w-full sm:w-auto text-center"
           >
-            Reservar Mesa
+            {t('cta.book')}
           </a>
           <a 
             href="tel:+593998594056" 
             className="bg-carbonara-wine text-white px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 w-full sm:w-auto text-center"
           >
-            Llamar Ahora
+            {t('cta.call')}
           </a>
         </motion.div>
       </div>

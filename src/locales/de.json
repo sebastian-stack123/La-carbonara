@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "history": "Geschichte",
+    "experience": "Erlebnis",
+    "menu": "Speisekarte",
+    "delivery": "Lieferung",
+    "reservations": "Reservierungen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "La Carbonara",
+    "subtitle": "Ristorante & Bar",
+    "description": "„Ein gastronomisches Erlebnis inspiriert von der italienischen Tradition, ausgewählten Zutaten, exklusiven Weinen und handgemachten Gerichten.“",
+    "bookNow": "Jetzt reservieren",
+    "feedback": "Erzählen Sie uns von Ihrer Erfahrung"
+  },
+  "about": {
+    "title": "La Storia",
+    "welcome": "Benvenuti a <br />La Carbonara",
+    "p1": "Wir sind ein italienisches Restaurant, das sich darauf spezialisiert hat, exquisite handgemachte italienische Küche mit frischen ausgewählten Zutaten und traditionellen Rezepten anzubieten.",
+    "p2": "Wir schaffen unvergessliche und beeindruckende Erlebnisse durch Gastronomie, exklusive Weine und außergewöhnlichen Service.",
+    "quote": "La carbonara, Momente der Magie für Ihren Gaumen.",
+    "operatingSince": "Geöffnet seit September 2024."
+  },
+  "features": {
+    "title": "Unser Erlebnis",
+    "f1": "Handgemachte italienische Küche",
+    "f2": "Exquisite Gerichte",
+    "f3": "Exklusive Weine",
+    "f4": "Haustierfreundlich",
+    "f5": "Signature-Cocktails",
+    "f6": "Events und Feiern",
+    "f7": "Kostenloses WLAN",
+    "f8": "Außenterrasse",
+    "f9": "Privatzimmer",
+    "f10": "Personalisierter Service",
+    "f11": "Romantische Dates",
+    "f12": "Sicherer und inklusiver Raum"
+  },
+  "menu": {
+    "ilNostro": "Il nostro",
+    "featured": "Ausgewähltes Menü",
+    "viewFull": "Vollständige Speisekarte ansehen",
+    "items": {
+      "sofia": {
+        "title": "Fettuccine Sofia Lauren",
+        "desc": "(Garnelen, Huhn, Napoli und Mamamia)"
+      },
+      "carbonara": {
+        "title": "Linguinne a la carbonara",
+        "desc": "(Linguine, Speck, Serrano-Schinken)"
+      },
+      "sinatra": {
+        "title": "Risotto Frank Sinatra",
+        "desc": "(Filet, Garnelen, Napoli und Mamamia)"
+      },
+      "funghi": {
+        "title": "Risotto Funghi",
+        "desc": "(Pilze, Portobellos, Champignons, Shiitake-Pilze)"
+      },
+      "mare": {
+        "title": "Fruto di Mare",
+        "desc": "(Tintenfisch, Garnelen, Muscheln, Oktopus)"
+      },
+      "formaggi": {
+        "title": "Pizza 4 Formaggui",
+        "desc": "(weiße Soße)"
+      },
+      "salmon": {
+        "title": "Räucherlachs-Pizza",
+        "desc": "Dünne Scheiben von Räucherlachs, Kapern und Frischkäse."
+      },
+      "prosciutto": {
+        "title": "Prosciutto Crudo Pizza",
+        "desc": "Mozzarella und authentischer importierter Prosciutto Crudo."
+      },
+      "hawaiana": {
+        "title": "Pizza Hawaiana",
+        "desc": "Rote Soße, Mozzarella, Schinken, Speck und Ananas."
+      }
+    }
+  },
+  "order": {
+    "title": "Lieferung",
+    "subtitle": "Genießen Sie La Carbonara, wo immer Sie wollen",
+    "desc": "Wir bieten eine kostenlose Lieferung in ganz González Suárez an.",
+    "uber": "Uber Eats",
+    "rappi": "Rappi",
+    "call": "Jetzt anrufen"
+  },
+  "feedback": {
+    "title": "Vorschläge",
+    "subtitle": "Erzählen Sie uns von Ihrer Erfahrung",
+    "desc": "Ihre Kommentare helfen uns, uns zu verbessern und weiterhin unvergessliche Erlebnisse anzubieten.",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht / Vorschlag",
+    "submit": "Vorschlag senden"
+  },
+  "cta": {
+    "title": "Ci vediamo presto",
+    "subtitle": "Erleben Sie ein wahres italienisches Erlebnis",
+    "desc": "Reservieren Sie Ihren Tisch und entdecken Sie die authentischen Aromen Italiens.",
+    "book": "Tisch reservieren",
+    "call": "Jetzt anrufen"
+  },
+  "contact": {
+    "hoursTitle": "Öffnungszeiten",
+    "restaurant": "Restaurant",
+    "days1": "Mo - Do",
+    "hours1": "12:00 - 22:30",
+    "days2": "Fr - Sa",
+    "hours2": "12:00 - 23:00",
+    "days3": "Sonntag",
+    "hours3": "Nur mit<br/>Reservierung",
+    "lunch": "Mittagessen",
+    "lunchDays": "Jeden Tag",
+    "lunchHours": "12:00 - 15:30",
+    "sundayOnly": "Sonntags nur auf Reservierung",
+    "followUs": "Folgen Sie uns",
+    "quote": "„Ein neues Konzept der italienischen Küche. Wir glauben, dass gutes Essen die Menschen zusammenbringt.“",
+    "visitUs": "Besuchen Sie uns"
+  },
+  "footer": {
+    "quote": "La carbonara, Momente der Magie für Ihren Gaumen.",
+    "desc": "Authentische handgemachte italienische Küche. Frische Zutaten, exklusive Weine und außergewöhnlicher Service in Quito.",
+    "contact": "Kontakt",
+    "hours": "Öffnungszeiten",
+    "days1": "Mo - Do:",
+    "days2": "Fr - Sa:",
+    "days3": "Sonntag:",
+    "execMenu": "Von Montag bis Freitag Business-Lunch",
+    "links": "Links",
+    "rights": "© 2024 LA CARBONARA. ALLE RECHTE VORBEHALTEN.",
+    "admission": "Wir behalten uns das Recht auf Einlass vor.",
+    "privacy": "Datenschutz-Bestimmungen",
+    "terms": "Geschäftsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "created": "ERSTELLT VON"
+  },
+  "loading": "Wird geladen..."
+}

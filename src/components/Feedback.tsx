@@ -1,15 +1,18 @@
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Feedback() {
+  const { t } = useTranslation();
+
   return (
     <section id="sugerencias" className="py-24 bg-transparent relative">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">Sugerencias</h2>
-          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">Cuéntanos tu experiencia</h3>
+          <h2 className="text-carbonara-gold font-cursive text-5xl mb-2">{t('feedback.title')}</h2>
+          <h3 className="font-sans font-light tracking-widest uppercase text-2xl md:text-3xl text-carbonara-ivory mb-4">{t('feedback.subtitle')}</h3>
           <div className="w-24 h-px bg-carbonara-gold mx-auto opacity-50 mb-8"></div>
           <p className="opacity-60 font-light max-w-2xl mx-auto italic">
-            Tus comentarios nos ayudan a mejorar y seguir ofreciendo experiencias memorables y formidables.
+            {t('feedback.desc')}
           </p>
         </div>
 
@@ -26,22 +29,22 @@ export default function Feedback() {
             <input type="hidden" name="_template" value="table" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-xs uppercase tracking-widest opacity-80">Nombre</label>
-                <input type="text" id="name" name="Nombre" required className="bg-black/20 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-carbonara-gold transition-colors" />
+                <label htmlFor="name" className="text-xs uppercase tracking-widest opacity-80">{t('feedback.name')}</label>
+                <input type="text" id="name" name="{t('feedback.name')}" required className="bg-black/20 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-carbonara-gold transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-xs uppercase tracking-widest opacity-80">Email</label>
-                <input type="email" id="email" name="Email" required className="bg-black/20 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-carbonara-gold transition-colors" />
+                <label htmlFor="email" className="text-xs uppercase tracking-widest opacity-80">{t('feedback.email')}</label>
+                <input type="email" id="email" name="{t('feedback.email')}" required className="bg-black/20 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-carbonara-gold transition-colors" />
               </div>
             </div>
             
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-xs uppercase tracking-widest opacity-80">Mensaje / Sugerencia</label>
+              <label htmlFor="message" className="text-xs uppercase tracking-widest opacity-80">{t('feedback.message')}</label>
               <textarea id="message" name="Mensaje" rows={4} required className="bg-black/20 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-carbonara-gold transition-colors resize-none"></textarea>
             </div>
 
             <button type="submit" className="mt-4 bg-carbonara-gold text-black px-10 py-4 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#b09155] transition-all duration-300 rounded-xl shadow-lg w-full md:w-auto self-center">
-              Enviar Sugerencia
+              {t('feedback.submit')}
             </button>
           </form>
         </motion.div>

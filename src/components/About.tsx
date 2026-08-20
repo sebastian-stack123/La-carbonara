@@ -1,8 +1,11 @@
 import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
 import FlagHandshake from './FlagHandshake';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="historia" className="py-24 md:py-32 bg-transparent overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -30,28 +33,25 @@ export default function About() {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">La Storia</h2>
-          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light">
-            Benvenuti a <br />
-            La Carbonara
-          </h3>
+          <h2 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">{t('about.title')}</h2>
+          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light" dangerouslySetInnerHTML={{ __html: t('about.welcome') }}></h3>
           <div className="w-16 h-px bg-carbonara-wine mb-8 mx-auto md:mx-0"></div>
           <p className="text-lg opacity-80 leading-relaxed font-light mb-4">
-            Somos un restaurante italiano dedicado a ofrecer exquisita cocina italiana artesanal, elaborada con ingredientes frescos seleccionados y recetas tradicionales.
+            {t('about.p1')}
           </p>
           <p className="text-lg opacity-80 leading-relaxed font-light mb-8">
-            Creamos experiencias memorables y formidables a través de la gastronomía, vinos exclusivos y una atención excepcional.
+            {t('about.p2')}
           </p>
           
           <div className="mb-10 text-center md:text-left">
              <p className="text-2xl font-cursive text-carbonara-gold border-b border-carbonara-wine inline-block pb-1">
-               La carbonara, momentos de magia para tu paladar.
+               {t('about.quote')}
              </p>
           </div>
           
           <div className="mt-12 flex flex-col items-center md:items-start">
             <FlagHandshake className="mb-4" />
-            <p className="text-sm tracking-widest uppercase opacity-50 mb-2">Operando desde septiembre del 2024.</p>
+            <p className="text-sm tracking-widest uppercase opacity-50 mb-2">{t('about.operatingSince')}</p>
           </div>
         </motion.div>
         

@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section id="inicio" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -23,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="font-cursive text-7xl md:text-9xl text-carbonara-gold mb-4 leading-none"
         >
-          La Carbonara
+          {t('hero.title')}
         </motion.h1>
         
         <motion.h2 
@@ -32,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="text-xl md:text-3xl font-light tracking-widest uppercase mb-6"
         >
-          Ristorante & Bar
+          {t('hero.subtitle')}
         </motion.h2>
         
         <motion.p 
@@ -41,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="opacity-80 text-sm md:text-base leading-relaxed mb-8 italic max-w-2xl"
         >
-          “Una experiencia gastronómica inspirada en la tradición italiana, ingredientes seleccionados, vinos exclusivos y platos elaborados artesanalmente.”
+          {t('hero.description')}
         </motion.p>
         
         <motion.div 
@@ -51,10 +54,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto mt-4"
         >
           <a href="#delivery" className="bg-carbonara-wine text-white px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl text-center shadow-2xl border border-carbonara-wine/50">
-            Reservar Ahora
+            {t('hero.bookNow')}
           </a>
           <a href="#sugerencias" className="bg-carbonara-gold text-black px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#b09155] transition-colors rounded-xl text-center shadow-2xl border border-carbonara-gold">
-            Cuéntanos tu experiencia
+            {t('hero.feedback')}
           </a>
         </motion.div>
       </div>
