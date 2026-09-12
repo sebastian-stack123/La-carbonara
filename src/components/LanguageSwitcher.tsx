@@ -6,7 +6,8 @@ import { useState, useRef, useEffect } from 'react';
 const languages = [
   { code: 'es', label: 'ES' },
   { code: 'en', label: 'EN' },
-  { code: 'de', label: 'DE' }
+  { code: 'de', label: 'DE' },
+  { code: 'pt', label: 'PT' }
 ];
 
 export default function LanguageSwitcher() {
