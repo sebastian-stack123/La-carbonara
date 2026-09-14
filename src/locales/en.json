@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "La Carbonara",
-    "subtitle": "Ristorante & Bar",
+    "subtitle": "Italian Restaurant in Quito",
     "description": "\"A gastronomic experience inspired by Italian tradition, selected ingredients, exclusive wines, and handcrafted dishes.\"",
     "bookNow": "Book Now",
     "feedback": "Tell us about your experience"
@@ -18,13 +18,13 @@
   "about": {
     "title": "La Storia",
     "welcome": "Benvenuti a <br />La Carbonara",
-    "p1": "We are an Italian restaurant dedicated to offering exquisite handcrafted Italian cuisine, prepared with fresh selected ingredients and traditional recipes.",
+    "p1": "We are an Italian restaurant in the González Suárez neighborhood, Quito, dedicated to offering exquisite handcrafted Italian cuisine, prepared with fresh selected ingredients and traditional recipes.",
     "p2": "We create memorable and formidable experiences through gastronomy, exclusive wines, and exceptional service.",
     "quote": "La carbonara, moments of magic for your palate.",
     "operatingSince": "Operating since September 2024."
   },
   "features": {
-    "title": "Our Experience",
+    "title": "Italian Food in Quito",
     "f1": "Artisanal Italian Cuisine",
     "f2": "Exquisite Dishes",
     "f3": "Exclusive Wines",

@@ -20,7 +20,7 @@ export default function About() {
           <div className="absolute -inset-4 border border-carbonara-wine/50 translate-x-4 translate-y-4 z-0 rounded-xl"></div>
           <img 
             src={IMAGES.aboutChef} 
-            alt="Chef preparing pasta" 
+            alt="Chef preparando pasta artesanal en La Carbonara, restaurante italiano en Quito" 
             loading="lazy"
             className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%] rounded-xl"
           />

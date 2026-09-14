@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={IMAGES.heroBackground} 
-          alt="Restaurant ambiance"
+          alt="Ambiente elegante de La Carbonara, restaurante italiano en Quito"
           fetchPriority="high"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
@@ -20,23 +20,23 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-carbonara-ivory px-4 w-full max-w-5xl mx-auto flex flex-col items-center pt-20">
-        <motion.h1 
+        <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="font-cursive text-7xl md:text-9xl text-carbonara-gold mb-4 leading-none"
         >
           {t('hero.title')}
-        </motion.h1>
+        </motion.h2>
         
-        <motion.h2 
+        <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="text-xl md:text-3xl font-light tracking-widest uppercase mb-6"
         >
           {t('hero.subtitle')}
-        </motion.h2>
+        </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
