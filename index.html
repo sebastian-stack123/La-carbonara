@@ -24,23 +24,90 @@
     </noscript>
     <meta name="google-site-verification" content="googlee3cf82c37b5a896e" />
   
+    
+
+    <!-- Favicon & App Icons -->
     <link rel="icon" type="image/jpeg" href="/fototitulo.jpg" />
+    <link rel="apple-touch-icon" href="/fototitulo.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://la-carbonara.com/" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:site_name" content="La Carbonara" />
+    <meta property="og:title" content="La Carbonara | Restaurante Italiano en Quito" />
+    <meta property="og:description" content="Descubre La Carbonara, tu restaurante italiano en Quito (González Suárez). Disfruta de auténtica pasta artesanal, exquisita pizza y la mejor cocina italiana. ¡Reserva tu mesa!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://la-carbonara.com/" />
+    <meta property="og:image" content="https://la-carbonara.com/fototitulo.jpg" />
+
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "La Carbonara",
-      "image": "https://la-carbonara.com/fototitulo.jpg",
-      "description": "Auténtico restaurante italiano en Quito, sector González Suárez. Especialistas en pasta artesanal y pizza.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "González Suárez",
-        "addressLocality": "Quito",
-        "addressRegion": "Pichincha",
-        "addressCountry": "EC"
-      },
-      "url": "https://la-carbonara.com",
-      "servesCuisine": "Italian"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://la-carbonara.com/#organization",
+          "name": "La Carbonara",
+          "url": "https://la-carbonara.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://la-carbonara.com/fototitulo.jpg"
+          },
+          "sameAs": [
+            "https://instagram.com/lacarbonaraec",
+            "https://www.facebook.com/Carbonaraec/",
+            "https://www.tiktok.com/@lacarbonaraec"
+          ]
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://la-carbonara.com/#restaurant",
+          "name": "La Carbonara",
+          "url": "https://la-carbonara.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://la-carbonara.com/fototitulo.jpg"
+          },
+          "image": "https://la-carbonara.com/fototitulo.jpg",
+          "description": "Auténtico restaurante italiano en Quito, sector González Suárez. Especialistas en pasta artesanal y pizza.",
+          "telephone": "+593998594056",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av González Suárez y Jacinto Bejarano",
+            "addressLocality": "Quito",
+            "addressRegion": "Pichincha",
+            "postalCode": "170150",
+            "addressCountry": "EC"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-0.197992",
+            "longitude": "-78.479577" 
+          },
+          "servesCuisine": "Italian",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "12:00",
+              "closes": "22:30"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday", "Saturday"],
+              "opens": "12:00",
+              "closes": "23:00"
+            }
+          ],
+          "sameAs": [
+            "https://instagram.com/lacarbonaraec",
+            "https://www.facebook.com/Carbonaraec/",
+            "https://www.tiktok.com/@lacarbonaraec"
+          ]
+        }
+      ]
     }
     </script>
 </head>
