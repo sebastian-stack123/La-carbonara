@@ -23,8 +23,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     </noscript>
 
-    <!-- ConsentManager CMP (Autoblocking compliant, deferred to prevent blocking hero paint) -->
-    <script defer type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/bda7a46ce2ec6.js" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+    <!-- ConsentManager CMP (Autoblocking compliant, async to prevent blocking hero paint) -->
+    <script async type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/bda7a46ce2ec6.js" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
     
     <meta name="google-site-verification" content="googlee3cf82c37b5a896e" />
     <meta name="theme-color" content="#111111" />
@@ -134,7 +134,77 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="min-h-screen bg-carbonara-black font-sans text-carbonara-ivory selection:bg-carbonara-gold selection:text-black relative">
+        <div class="atmospheric-bg fixed top-0 left-0 w-full h-full pointer-events-none"></div>
+        <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent py-6">
+          <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex-shrink-0 transition-opacity hover:opacity-80 flex items-center relative h-12 md:h-16 w-32 md:w-48">
+              <img 
+                src="/images/logo-carbonara.webp" 
+                alt="La Carbonara Ristorante &amp; Bar Quito" 
+                width="280" 
+                height="143" 
+                decoding="async" 
+                class="absolute top-1/2 left-0 -translate-y-1/2 h-20 md:h-32 w-auto object-contain max-w-none"
+              />
+            </a>
+            
+            <div class="hidden lg:flex gap-8 items-center">
+              <a href="#inicio" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Inicio</a>
+              <a href="#historia" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Historia</a>
+              <a href="#experiencia" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Experiencia</a>
+              <a href="#menu" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Menú</a>
+              <a href="#delivery" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Delivery</a>
+              <a href="#reservas" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Reservas</a>
+              <a href="#contacto" class="text-xs uppercase tracking-widest text-carbonara-ivory/80 hover:text-carbonara-gold transition-colors">Contacto</a>
+              <div class="relative">
+                <button class="flex items-center gap-1 text-carbonara-gold hover:text-white transition-colors p-2" aria-label="Change Language">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                  <span class="text-sm font-sans tracking-widest">ES</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 lg:hidden">
+              <div class="relative">
+                <button class="flex items-center gap-1 text-carbonara-gold hover:text-white transition-colors p-2" aria-label="Change Language">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                  <span class="text-sm font-sans tracking-widest">ES</span>
+                </button>
+              </div>
+              <button class="text-carbonara-gold" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <section id="inicio" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 z-0">
+            <img 
+              src="/images/hero-bg.webp" 
+              alt="Ambiente elegante de La Carbonara, restaurante italiano en Quito" 
+              width="821" 
+              height="613" 
+              loading="eager" 
+              decoding="async" 
+              fetchpriority="high" 
+              class="w-full h-full object-cover object-center grayscale-[20%]"
+            />
+            <div class="absolute inset-0 bg-carbonara-black/70"></div>
+          </div>
+          <div class="relative z-10 text-center text-carbonara-ivory px-4 w-full max-w-5xl mx-auto flex flex-col items-center pt-20">
+            <h2 class="font-cursive text-7xl md:text-9xl text-carbonara-gold mb-4 leading-none">La Carbonara</h2>
+            <h1 class="text-xl md:text-3xl font-light tracking-widest uppercase mb-6">Restaurante Italiano en Quito</h1>
+            <p class="opacity-80 text-sm md:text-base leading-relaxed mb-8 italic max-w-2xl">“Una experiencia gastronómica inspirada en la tradición italiana, ingredientes seleccionados, vinos exclusivos y platos elaborados artesanalmente.”</p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto mt-4">
+              <a href="#delivery" class="bg-carbonara-wine text-white px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl text-center shadow-2xl border border-carbonara-wine/50">Reservar Ahora</a>
+              <a href="#sugerencias" class="bg-carbonara-gold text-black px-10 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#b09155] transition-colors rounded-xl text-center shadow-2xl border border-carbonara-gold">Cuéntanos tu experiencia</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
     <!-- Google tag (gtag.js) - Loaded after DOM markup to prioritize Hero LCP -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1G0L4P00V"></script>

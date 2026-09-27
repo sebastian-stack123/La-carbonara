@@ -5,7 +5,6 @@ import galleriaFoto7 from './galleria7.webp';
 import lasagnaImg from './lasagna.webp';
 import barBg from './bar.webp';
 import laCarbonaraBg from './lacarbonara.webp';
-import logoLaCarbonara from './logo-carbonara.webp';
 import pizzaProsciuttoImg from './pizzaproscioutto.webp';
 import pizzaHawaianaImg from './pizzahawaianna.webp';
 import sofiaLaurenImg from './sofiloren-1.webp';
@@ -20,7 +19,7 @@ import mapLocationImg from './mapadeubicacion.webp';
 
 export const IMAGES = {
   // Logo
-  logo: logoLaCarbonara,
+  logo: '/images/logo-carbonara.webp',
 
   // Sección Inicio (Hero)
   heroBackground: '/images/hero-bg.webp',

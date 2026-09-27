@@ -21,6 +21,49 @@ const Legal = lazy(() => import('./components/Legal'));
 export default function App() {
   const { t } = useTranslation();
   const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms' | 'cookies'>('home');
+  const [loadDeferred, setLoadDeferred] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    // Load immediately if user navigated directly to an anchor (e.g. #menu) or is a crawler
+    const hash = window.location.hash;
+    if (hash && hash !== '#inicio') return true;
+    if (typeof navigator !== 'undefined' && /bot|google|crawler|spider|bing|lighthouse/i.test(navigator.userAgent)) {
+      return true;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (loadDeferred) return;
+
+    const triggerLoad = () => {
+      setLoadDeferred(true);
+      cleanup();
+    };
+
+    const cleanup = () => {
+      window.removeEventListener('scroll', triggerLoad);
+      window.removeEventListener('touchstart', triggerLoad);
+      window.removeEventListener('mousemove', triggerLoad);
+    };
+
+    window.addEventListener('scroll', triggerLoad, { passive: true, once: true });
+    window.addEventListener('touchstart', triggerLoad, { passive: true, once: true });
+    window.addEventListener('mousemove', triggerLoad, { passive: true, once: true });
+
+    if ('requestIdleCallback' in window) {
+      const id = (window as any).requestIdleCallback(triggerLoad, { timeout: 600 });
+      return () => {
+        (window as any).cancelIdleCallback?.(id);
+        cleanup();
+      };
+    } else {
+      const timer = setTimeout(triggerLoad, 300);
+      return () => {
+        clearTimeout(timer);
+        cleanup();
+      };
+    }
+  }, [loadDeferred]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -28,7 +71,12 @@ export default function App() {
       if (hash === '#privacy') setCurrentView('privacy');
       else if (hash === '#terms') setCurrentView('terms');
       else if (hash === '#cookies') setCurrentView('cookies');
-      else setCurrentView('home');
+      else {
+        setCurrentView('home');
+        if (hash && hash !== '#inicio') {
+          setLoadDeferred(true);
+        }
+      }
     };
     
     window.addEventListener('hashchange', handleHashChange);
@@ -49,17 +97,19 @@ export default function App() {
       <div className="atmospheric-bg fixed top-0 left-0 w-full h-full pointer-events-none"></div>
       <Navbar />
       <Hero />
-      <Suspense fallback={<div className="h-24 flex items-center justify-center text-carbonara-gold opacity-50">{t('loading')}</div>}>
-        <About />
-        <Features />
-        <Menu />
-        <Gallery />
-        <OrderOnline />
-        <Feedback />
-        <Info />
-        <CTA />
-        <Footer />
-      </Suspense>
+      {loadDeferred && (
+        <Suspense fallback={<div className="h-24 flex items-center justify-center text-carbonara-gold opacity-50">{t('loading')}</div>}>
+          <About />
+          <Features />
+          <Menu />
+          <Gallery />
+          <OrderOnline />
+          <Feedback />
+          <Info />
+          <CTA />
+          <Footer />
+        </Suspense>
+      )}
       
       {/* WhatsApp Floating Button */}
       <a 
