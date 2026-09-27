@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/great-vibes.woff2') format('woff2');
+}
+
 @theme {
   --color-carbonara-black: #111111;
   --color-carbonara-ivory: #F8F6F2;
@@ -7,7 +15,7 @@
   --color-carbonara-olive: #3E4B36;
   --color-carbonara-wine: #7A1C28;
 
-  --font-cursive: "Playfair Display", serif;
+  --font-cursive: "Great Vibes", "Playfair Display", cursive;
   --font-serif: "Playfair Display", serif;
   --font-sans: "Montserrat", sans-serif;
 }
@@ -16,6 +24,19 @@ body {
   background-color: var(--color-carbonara-black);
   color: var(--color-carbonara-ivory);
   font-family: var(--font-sans);
+}
+
+/* Accessibility: underline content/footer text links so they do not rely solely on color */
+footer a:not([class*="bg-"]):not([class*="button"]),
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201, 168, 106, 0.4);
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+footer a:not([class*="bg-"]):not([class*="button"]):hover,
+.prose a:hover {
+  text-decoration-color: var(--color-carbonara-gold);
 }
 
 /* Smooth scrolling */

@@ -112,6 +112,8 @@ export default function Info() {
             <img 
               src={IMAGES.mapLocation} 
               alt="Mapa de ubicación de La Carbonara, restaurante italiano en la González Suárez, Quito" 
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
             />
           </a>

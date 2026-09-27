@@ -10,8 +10,9 @@ export default function OrderOnline() {
       <div className="absolute inset-0 z-0">
         <img 
           src={IMAGES.deliveryBackground} 
-          alt="Pizza background" 
+          alt="Ambiente de bar y pizzas de La Carbonara" 
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
         <div className="absolute inset-0 bg-carbonara-black/80"></div>

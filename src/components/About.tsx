@@ -22,6 +22,7 @@ export default function About() {
             src={IMAGES.aboutChef} 
             alt="Chef preparando pasta artesanal en La Carbonara, restaurante italiano en Quito" 
             loading="lazy"
+            decoding="async"
             className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%] rounded-xl"
           />
         </motion.div>

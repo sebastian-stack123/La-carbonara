@@ -12,6 +12,8 @@ export default function Hero() {
         <img 
           src={IMAGES.heroBackground} 
           alt="Ambiente elegante de La Carbonara, restaurante italiano en Quito"
+          loading="eager"
+          decoding="async"
           fetchPriority="high"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
@@ -21,9 +23,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center text-carbonara-ivory px-4 w-full max-w-5xl mx-auto flex flex-col items-center pt-20">
         <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="font-cursive text-7xl md:text-9xl text-carbonara-gold mb-4 leading-none"
         >
           {t('hero.title')}

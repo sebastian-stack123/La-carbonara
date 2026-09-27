@@ -34,7 +34,7 @@ export default function Navbar() {
           <img 
             src={IMAGES.logo} 
             alt="La Carbonara Ristorante & Bar Quito"
-            fetchPriority="high"
+            decoding="async"
             className="absolute top-1/2 left-0 -translate-y-1/2 h-20 md:h-32 w-auto object-contain max-w-none"
           />
         </a>

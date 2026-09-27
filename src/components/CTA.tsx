@@ -10,8 +10,9 @@ export default function CTA() {
       <div className="absolute inset-0 z-0">
         <img 
           src={IMAGES.ctaBackground} 
-          alt="Restaurant table setup" 
+          alt="Mesa lista para reserva en La Carbonara" 
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-center grayscale-[20%]"
         />
         <div className="absolute inset-0 bg-carbonara-black/80"></div>
