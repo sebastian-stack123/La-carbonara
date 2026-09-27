@@ -11,29 +11,21 @@
     <link rel="dns-prefetch" href="https://a.delivery.consentmanager.net" />
     <link rel="preconnect" href="https://cdn.consentmanager.net" crossorigin />
     
-    <!-- Local Critical Font Preload (Great Vibes for Hero LCP) -->
+    <!-- Critical Resources Preload (Hero Background & Font) -->
+    <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="/fonts/great-vibes.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Google Fonts for Secondary Typography (Async) -->
+    <!-- Google Fonts for Secondary Typography (Optimized weights, display=swap, non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     </noscript>
 
-    <!-- ConsentManager CMP (Autoblocking compliant) -->
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/bda7a46ce2ec6.js" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+    <!-- ConsentManager CMP (Autoblocking compliant, deferred to prevent blocking hero paint) -->
+    <script defer type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/bda7a46ce2ec6.js" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1G0L4P00V"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Y1G0L4P00V');
-    </script>
-
     <meta name="google-site-verification" content="googlee3cf82c37b5a896e" />
     <meta name="theme-color" content="#111111" />
 
@@ -144,5 +136,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Google tag (gtag.js) - Loaded after DOM markup to prioritize Hero LCP -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1G0L4P00V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Y1G0L4P00V');
+    </script>
   </body>
 </html>

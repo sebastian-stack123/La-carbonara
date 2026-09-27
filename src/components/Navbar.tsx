@@ -10,10 +10,17 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -34,6 +41,8 @@ export default function Navbar() {
           <img 
             src={IMAGES.logo} 
             alt="La Carbonara Ristorante & Bar Quito"
+            width="280"
+            height="143"
             decoding="async"
             className="absolute top-1/2 left-0 -translate-y-1/2 h-20 md:h-32 w-auto object-contain max-w-none"
           />

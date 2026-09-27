@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'motion/react';
 import { Globe } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
@@ -42,11 +41,8 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <motion.div 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="absolute right-0 mt-2 py-2 w-24 bg-carbonara-black/95 border border-carbonara-wine/50 rounded-lg shadow-xl backdrop-blur-md z-50 flex flex-col"
+        <div 
+          className="absolute right-0 mt-2 py-2 w-24 bg-carbonara-black/95 border border-carbonara-wine/50 rounded-lg shadow-xl backdrop-blur-md z-50 flex flex-col transition-all duration-200"
         >
           {languages.map((lng) => (
             <button
@@ -59,7 +55,7 @@ export default function LanguageSwitcher() {
               {lng.label}
             </button>
           ))}
-        </motion.div>
+        </div>
       )}
     </div>
   );
