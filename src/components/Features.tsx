@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { ChefHat, Leaf, UtensilsCrossed, Wine, GlassWater, Wifi, Sun, PawPrint, Users, HeartHandshake, Heart, ShieldCheck, Martini } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -30,13 +29,9 @@ export default function Features() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <motion.div 
+            <div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-carbonara-wine/60 backdrop-blur-sm border border-carbonara-wine rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-2xl hover:bg-carbonara-wine/80 transition-colors"
+              className="bg-carbonara-wine/60 backdrop-blur-sm border border-carbonara-wine rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-2xl hover:bg-carbonara-wine/80 transition-colors group"
             >
               <div className="text-carbonara-gold mb-4 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
@@ -44,7 +39,7 @@ export default function Features() {
               <h3 className="font-sans text-xs md:text-sm uppercase tracking-widest font-semibold">
                 {feature.title}
               </h3>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

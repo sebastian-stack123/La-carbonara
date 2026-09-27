@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
 export default function Feedback() {
@@ -16,13 +15,7 @@ export default function Feedback() {
           </p>
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="bg-carbonara-wine/40 backdrop-blur-md p-8 md:p-12 border border-carbonara-wine/60 rounded-2xl shadow-2xl"
-        >
+        <div className="bg-carbonara-wine/40 backdrop-blur-md p-8 md:p-12 border border-carbonara-wine/60 rounded-2xl shadow-2xl">
           <form action="https://formsubmit.co/Lacarbonaraecuador@gmail.com" method="POST" className="flex flex-col gap-6">
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="Nueva sugerencia de La Carbonara" />
@@ -47,7 +40,7 @@ export default function Feedback() {
               {t('feedback.submit')}
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

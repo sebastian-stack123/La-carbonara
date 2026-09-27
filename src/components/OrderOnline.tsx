@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
 import { useTranslation } from 'react-i18next';
 
@@ -19,43 +18,19 @@ export default function OrderOnline() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="font-cursive text-5xl text-carbonara-gold mb-2"
-        >
+        <h2 className="font-cursive text-5xl text-carbonara-gold mb-2">
           {t('order.title')}
-        </motion.h2>
+        </h2>
         
-        <motion.h3 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-serif text-3xl md:text-5xl text-white mb-6 leading-tight uppercase font-light tracking-widest"
-        >
+        <h3 className="font-serif text-3xl md:text-5xl text-white mb-6 leading-tight uppercase font-light tracking-widest">
           {t('order.subtitle')}
-        </motion.h3>
+        </h3>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-cursive text-2xl md:text-3xl text-carbonara-gold/90 mb-12 max-w-2xl mx-auto"
-        >
+        <p className="font-cursive text-2xl md:text-3xl text-carbonara-gold/90 mb-12 max-w-2xl mx-auto">
           {t('order.desc')}
-        </motion.p>
+        </p>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row justify-center items-center gap-6"
-        >
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <a 
             href="https://www.ubereats.com/ec/store/la-carbonara-ec/YvgImavdX3q70WYG2UuKzQ" 
             target="_blank" 
@@ -78,7 +53,7 @@ export default function OrderOnline() {
           >
             {t('order.call')}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

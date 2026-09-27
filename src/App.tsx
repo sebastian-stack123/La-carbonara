@@ -24,10 +24,10 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'privacy' | 'terms' | 'cookies'>('home');
   const [loadDeferred, setLoadDeferred] = useState(() => {
     if (typeof window === 'undefined') return true;
-    // Load immediately if user navigated directly to an anchor (e.g. #menu) or is a crawler
+    // Load immediately if user navigated directly to an anchor (e.g. #menu) or is a search engine bot
     const hash = window.location.hash;
     if (hash && hash !== '#inicio') return true;
-    if (typeof navigator !== 'undefined' && /bot|google|crawler|spider|bing|lighthouse/i.test(navigator.userAgent)) {
+    if (typeof navigator !== 'undefined' && /googlebot|bingbot|baiduspider|yandex/i.test(navigator.userAgent)) {
       return true;
     }
     return false;
@@ -52,13 +52,13 @@ export default function App() {
     window.addEventListener('mousemove', triggerLoad, { passive: true, once: true });
 
     if ('requestIdleCallback' in window) {
-      const id = (window as any).requestIdleCallback(triggerLoad, { timeout: 600 });
+      const id = (window as any).requestIdleCallback(triggerLoad, { timeout: 2500 });
       return () => {
         (window as any).cancelIdleCallback?.(id);
         cleanup();
       };
     } else {
-      const timer = setTimeout(triggerLoad, 300);
+      const timer = setTimeout(triggerLoad, 2000);
       return () => {
         clearTimeout(timer);
         cleanup();

@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Leaf } from 'lucide-react';
 import { IMAGES } from '../config/images';
 import { useTranslation } from 'react-i18next';
@@ -66,12 +65,8 @@ export default function Menu() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {menuItems.map((item, index) => (
-            <motion.div 
+            <div 
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: (index % 3) * 0.1 }}
               className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-carbonara-wine/30 transition-all duration-500 flex flex-col"
             >
               <div className="relative h-56 overflow-hidden">
@@ -92,20 +87,15 @@ export default function Menu() {
                   {item.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
+        <div className="text-center mt-16">
           <a href="/La_Carbonara_menu.pdf" target="_blank" rel="noopener noreferrer" className="bg-carbonara-wine text-white px-12 py-5 text-sm font-serif tracking-[0.15em] uppercase hover:bg-[#60141e] transition-colors rounded-xl shadow-2xl border border-carbonara-wine/50 inline-block">
             {t('menu.viewFull')}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

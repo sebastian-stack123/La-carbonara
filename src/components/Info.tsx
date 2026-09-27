@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import { IMAGES } from '../config/images';
 import { useTranslation } from 'react-i18next';
@@ -11,11 +10,7 @@ export default function Info() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
         
         {/* {t('contact.hoursTitle')} */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+        <div 
           className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-10 text-center shadow-xl flex flex-col justify-center"
         >
           <h3 className="font-cursive text-5xl text-carbonara-gold mb-4">{t('contact.hoursTitle')}</h3>
@@ -36,14 +31,10 @@ export default function Info() {
           <div className="mt-auto bg-black/20 p-4 rounded-lg hidden">
             <p className="text-xs uppercase tracking-widest font-medium text-carbonara-gold">{t('contact.days3')}s bajo reserva únicamente</p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Social & Contact */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div 
           className="flex flex-col justify-between gap-8"
         >
           <div className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-8 shadow-xl flex-grow">
@@ -88,14 +79,10 @@ export default function Info() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Location / Contact Text */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div 
           className="bg-carbonara-wine/40 border border-carbonara-wine/60 rounded-xl p-8 shadow-xl flex flex-col justify-center"
         >
           <h3 className="font-cursive text-4xl text-carbonara-gold mb-2 text-center">{t('contact.visitUs')}</h3>
@@ -139,7 +126,7 @@ export default function Info() {
               <a href="mailto:Lacarbonaraecuador@gmail.com" className="text-sm font-light opacity-90 hover:text-carbonara-gold transition-colors">Lacarbonaraecuador@gmail.com</a>
             </li>
           </ul>
-        </motion.div>
+        </div>
         
       </div>
     </section>

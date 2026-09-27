@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
 import { useTranslation } from 'react-i18next';
 
@@ -19,43 +18,19 @@ export default function CTA() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="font-cursive text-6xl text-carbonara-gold mb-6"
-        >
+        <h2 className="font-cursive text-6xl text-carbonara-gold mb-6">
           {t('cta.title')}
-        </motion.h2>
+        </h2>
         
-        <motion.h3 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-sans font-light tracking-widest uppercase text-3xl md:text-5xl text-white mb-6 leading-tight pb-2"
-        >
+        <h3 className="font-sans font-light tracking-widest uppercase text-3xl md:text-5xl text-white mb-6 leading-tight pb-2">
           {t('cta.subtitle')}
-        </motion.h3>
+        </h3>
         
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-gray-300 text-lg font-light mb-12 italic"
-        >
+        <p className="text-gray-300 text-lg font-light mb-12 italic">
           {t('cta.desc')}
-        </motion.p>
+        </p>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
-        >
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a 
             href="https://wa.me/593998594056" 
             target="_blank"
@@ -70,7 +45,7 @@ export default function CTA() {
           >
             {t('cta.call')}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

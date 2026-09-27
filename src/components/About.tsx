@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { IMAGES } from '../config/images';
 import FlagHandshake from './FlagHandshake';
 import { useTranslation } from 'react-i18next';
@@ -10,30 +9,20 @@ export default function About() {
     <section id="historia" className="py-24 md:py-32 bg-transparent overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-          className="relative"
-        >
+        <div className="relative">
           <div className="absolute -inset-4 border border-carbonara-wine/50 translate-x-4 translate-y-4 z-0 rounded-xl"></div>
           <img 
             src={IMAGES.aboutChef} 
             alt="Chef preparando pasta artesanal en La Carbonara, restaurante italiano en Quito" 
             loading="lazy"
             decoding="async"
+            width="600"
+            height="372"
             className="w-full h-auto aspect-[4/5] object-cover relative z-10 shadow-2xl grayscale-[20%] rounded-xl"
           />
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-center md:text-left"
-        >
+        <div className="text-center md:text-left">
           <h2 className="text-carbonara-gold font-cursive text-8xl mb-4 leading-none">{t('about.title')}</h2>
           <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-carbonara-ivory mb-8 leading-tight tracking-widest uppercase font-light" dangerouslySetInnerHTML={{ __html: t('about.welcome') }}></h3>
           <div className="w-16 h-px bg-carbonara-wine mb-8 mx-auto md:mx-0"></div>
@@ -54,7 +43,7 @@ export default function About() {
             <FlagHandshake className="mb-4" />
             <p className="text-sm tracking-widest uppercase opacity-50 mb-2">{t('about.operatingSince')}</p>
           </div>
-        </motion.div>
+        </div>
         
       </div>
     </section>
