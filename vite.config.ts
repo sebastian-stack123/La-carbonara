@@ -41,6 +41,7 @@ export default defineConfig(({ mode }) => {
     build: {
       target: 'es2020',
       cssCodeSplit: true,
+      modulePreload: false,
       rollupOptions: {
         output: {
           manualChunks(id) {
