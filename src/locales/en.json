@@ -139,5 +139,11 @@
     "cookies": "Cookie Policy",
     "created": "CREATED BY"
   },
+  "cookieConsent": {
+    "text": "We use cookies to ensure site functionality and anonymously analyze traffic.",
+    "moreInfo": "Cookie policy",
+    "accept": "Accept",
+    "reject": "Decline"
+  },
   "loading": "Loading..."
 }

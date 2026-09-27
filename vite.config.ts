@@ -3,12 +3,36 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
+function inlineCss() {
+  return {
+    name: 'inline-css-plugin',
+    enforce: 'post' as const,
+    transformIndexHtml(html: string, { bundle }: any) {
+      if (!bundle) return html;
+      let newHtml = html;
+      for (const [fileName, chunk] of Object.entries(bundle)) {
+        if (fileName.endsWith('.css') && (chunk as any).type === 'asset') {
+          const cssContent = (chunk as any).source.toString();
+          const baseName = path.basename(fileName);
+          const linkRegex = new RegExp(`<link[^>]*rel="stylesheet"[^>]*href="[^"]*${baseName}"[^>]*>`, 'gi');
+          if (linkRegex.test(newHtml)) {
+            newHtml = newHtml.replace(linkRegex, `<style>${cssContent}</style>`);
+          } else {
+            newHtml = newHtml.replace('</head>', `<style>${cssContent}</style></head>`);
+          }
+        }
+      }
+      return newHtml;
+    }
+  };
+}
+
 export default defineConfig(({ mode }) => {
   return {
     define: {
       'process.env.NODE_ENV': JSON.stringify(mode === 'development' ? 'development' : 'production'),
     },
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), inlineCss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

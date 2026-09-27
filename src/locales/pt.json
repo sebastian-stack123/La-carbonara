@@ -139,5 +139,11 @@
     "cookies": "Política de Cookies",
     "created": "CRIADO POR"
   },
+  "cookieConsent": {
+    "text": "Utilizamos cookies para garantir as funcionalidades do site e analisar o tráfego anonimamente.",
+    "moreInfo": "Política de cookies",
+    "accept": "Aceitar",
+    "reject": "Rejeitar"
+  },
   "loading": "Carregando..."
 }

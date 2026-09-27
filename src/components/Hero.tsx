@@ -8,16 +8,20 @@ export default function Hero() {
     <section id="inicio" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={IMAGES.heroBackground} 
-          alt="Ambiente elegante de La Carbonara, restaurante italiano en Quito"
-          width="821"
-          height="613"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          className="w-full h-full object-cover object-center grayscale-[20%]"
-        />
+        <picture>
+          <source srcSet="/images/hero-bg.avif" type="image/avif" />
+          <source srcSet="/images/hero-bg.webp" type="image/webp" />
+          <img 
+            src={IMAGES.heroBackground} 
+            alt="Ambiente elegante de La Carbonara, restaurante italiano en Quito"
+            width="821"
+            height="613"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="w-full h-full object-cover object-center grayscale-[20%]"
+          />
+        </picture>
         <div className="absolute inset-0 bg-carbonara-black/70"></div>
       </div>
 

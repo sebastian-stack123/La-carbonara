@@ -17,6 +17,7 @@ const Info = lazy(() => import('./components/Info'));
 const Footer = lazy(() => import('./components/Footer'));
 const CTA = lazy(() => import('./components/CTA'));
 const Legal = lazy(() => import('./components/Legal'));
+const CookieConsent = lazy(() => import('./components/CookieConsent'));
 
 export default function App() {
   const { t } = useTranslation();
@@ -124,6 +125,7 @@ export default function App() {
       <Suspense fallback={null}>
         <Analytics />
         <SpeedInsights />
+        <CookieConsent />
       </Suspense>
     </div>
   );

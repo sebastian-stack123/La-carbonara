@@ -139,5 +139,11 @@
     "cookies": "Cookie-Richtlinie",
     "created": "ERSTELLT VON"
   },
+  "cookieConsent": {
+    "text": "Wir verwenden Cookies, um die Website-Funktionen sicherzustellen und den Datenverkehr anonym zu analysieren.",
+    "moreInfo": "Cookie-Richtlinie",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen"
+  },
   "loading": "Wird geladen..."
 }
