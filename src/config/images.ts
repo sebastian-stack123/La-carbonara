@@ -5,7 +5,7 @@ import galleriaFoto7 from './galleria7.webp';
 import lasagnaImg from './lasagna.webp';
 import barBg from './bar.webp';
 import laCarbonaraBg from './lacarbonara.webp';
-import pizzaProsciuttoImg from './pizzaproscioutto.webp';
+import pizzaProsciuttoImg from './prosciuttocrudo-1.webp';
 import pizzaHawaianaImg from './pizzahawaianna.webp';
 import sofiaLaurenImg from './sofiloren-1.webp';
 import fruttiDiMareImg from './fruttidimare.webp';
